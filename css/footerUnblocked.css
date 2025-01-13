@@ -1,0 +1,109 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 容器样式 */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* 头部样式 */
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0; /* 增加顶部和底部的内边距 */
+    border-bottom: #0779e4 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+    margin: 0; /* 移除默认的外边距 */
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px; /* 增加左右内边距 */
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 0; /* 移除顶部的外边距 */
+}
+
+header .highlight, header .current a {
+    color: #0779e4;
+    font-weight: bold;
+}
+
+/* 文章列表样式 */
+#articles {
+    margin-top: 20px;
+}
+
+#articles article {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+#articles article h2 {
+    color: #333;
+}
+
+#articles article p {
+    color: #666;
+}
+
+#articles article a {
+    color: #0779e4;
+}
+
+#articles article a:hover {
+    text-decoration: underline;
+}
+
+/* 页脚样式 */
+footer {
+    padding: 20px 0; /* 增加顶部和底部的内边距 */
+    margin-top: 20px;
+    color: #fff;
+    background-color: #333;
+    text-align: center;
+}
+
+footer a {
+    color: #0779e4;
+}
