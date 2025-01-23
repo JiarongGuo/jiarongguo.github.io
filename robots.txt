@@ -1,0 +1,7 @@
+User-agent=python-requests
+Disallow: /
+User-agent: *
+Disallow:
+Disallow: /js/
+Disallow: /css/
+Sitemap: https://jiarongguo.github.io/sitemap.xml
