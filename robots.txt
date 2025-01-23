@@ -1,4 +1,4 @@
-User-agent=python-requests
+User-agent: python-requests
 Disallow: /
 User-agent: *
 Disallow:
