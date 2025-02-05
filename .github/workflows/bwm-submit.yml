@@ -1,0 +1,18 @@
+name: BWM website submit
+
+on:
+  workflow_run:
+    workflows: [ pages-build-deployment ]
+    types: [ completed ]
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy Stage
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'https://ssl.bing.com/webmaster/api.svc/json/SubmitUrlbatch?apikey=ed358edb13b141afaf9227ef75d54bc4'
+          method: 'GET'
+          customHeaders: '{"Content-Type": "application/json; charset=utf-8"}'
+          data: '{ "siteUrl" : "https://jiarongguo.github.io", "urlList" : [ "https://jiarongguo.github.io/", "https://jiarongguo.github.io/passage/" ] }'
