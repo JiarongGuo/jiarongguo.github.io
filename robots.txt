@@ -4,4 +4,6 @@ User-agent: *
 Allow:    /
 Disallow: /js/
 Disallow: /css/
+Disallow: /licence.html
+
 Sitemap: https://jiarongguo.github.io/sitemap.xml
