@@ -6,13 +6,23 @@ on:
     types: [ completed ]
 
 jobs:
-  deployment:
+  site:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy Stage
+      - name: site submit
         uses: fjogeleit/http-request-action@v1
         with:
           url: 'https://ssl.bing.com/webmaster/api.svc/json/SubmitUrlbatch?apikey=ed358edb13b141afaf9227ef75d54bc4'
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json; charset=utf-8"}'
           data: '{ "siteUrl" : "https://jiarongguo.github.io", "urlList" : [ "https://jiarongguo.github.io/", "https://jiarongguo.github.io/passage/" ] }'
+  sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: sitemap submit
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'https://ssl.bing.com/webmaster/api.svc/json/SubmitFeed?apikey=ed358edb13b141afaf9227ef75d54bc4'
+          method: 'POST'
+          customHeaders: '{"Content-Type": "application/json; charset=utf-8"}'
+          data: '{ "siteUrl":"https://jiarongguo.github.io", "feedUrl":"https://jiarongguo.github.io/sitemap.xml" }'
